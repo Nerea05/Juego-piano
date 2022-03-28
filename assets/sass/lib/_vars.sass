@@ -1,0 +1,97 @@
+//COLORES
+//red
+$soft2-red: #ffdbd0
+$soft-red: #FFB8A1
+$red: #FF835B
+$dark-red: #a54e31
+//blue
+$soft2-blue: #d6f0ff
+$soft-blue: #ADE1FF
+$blue: #68bbea
+$dark-blue: #4983a6
+//pink
+$soft2-pink: #ffe2ec
+$soft-pink: #FFC6DA
+$pink: #f29dbf
+$dark-pink: #c25b7f
+//orange
+$soft2-orange: #faedc3
+$soft-orange: #FFE48E
+$orange: #fdd44d
+$dark-orange: #b5a05c
+//pistacho
+$soft-pistacho: #f4fdc0
+$pistacho: #EBFF7C
+$dark-pistacho: #99a45b
+//green
+$soft-green: #97f8c0
+$green: #44D480
+$dark-green: #2b8250
+//purple
+$soft-purple: #f3ebff
+$purple: #ddc6ff
+$dark-purple: #8c6bbf
+
+//BOTONES
+.button-56
+  animation:bouncy 5s infinite linear
+  align-items: center
+  background-color: $pistacho
+  border: 3px solid $green
+  border-radius: 10px
+  box-sizing: border-box
+  color: $green
+  cursor: pointer
+  display: flex
+  font-family: Knicknack
+  font-size: 30px
+  height: 48px
+  justify-content: center
+  line-height: 24px
+  max-width: 100%
+  padding: 0 25px
+  position: relative
+  text-align: center
+  text-decoration: none
+  user-select: none
+  -webkit-user-select: none
+  touch-action: manipulation
+  margin-left: 650px
+
+
+  &:after
+    background-color: $green
+    border-radius: 8px
+    content: ""
+    display: block
+    height: 48px
+    left: 0
+    width: 100%
+    position: absolute
+    top: -2px
+    transform: translate(8px, 8px)
+    transition: transform .2s ease-out
+    z-index: -1
+
+  &:hover:after
+    transform: translate(0, 0)
+
+  &:active
+    background-color: #ffdeda
+    outline: 0
+
+  &:hover
+    outline: 0
+
+@media (min-width: 768px)
+  .button-56
+    padding: 0 40px
+
+
+  
+  
+
+
+
+
+

@@ -1,0 +1,268 @@
+@import "lib/vars"
+@import "lib/type"
+@import "lib/presentation"
+@import "lib/cancion"
+@import "lib/responsive"
+
+
+*
+  box-sizing: border-box
+
+body
+  margin: 0
+
+#level1
+  position: fixed
+  z-index: 1
+  width: 500px
+#level2
+  position: fixed
+  z-index: 1
+  width: 83px
+  left: 65px
+  top: 100px
+.piano
+  top: 400px
+  list-style: none
+  margin-left: 70px
+  display: flex
+  flex-direction: row
+  position: fixed
+  width: 100%
+  height: 400px
+
+//NOTAS GRAVES
+#G
+  display: flex
+  justify-content: center
+  width: 130px
+  height: 230px
+  background: $red
+  &:hover
+    cursor: pointer 
+    background: $soft-red
+    transition: 0.25s
+    box-shadow: 8px 10px 24px -3px rgba(199,91,59,0.46)
+    -webkit-box-shadow: 8px 10px 24px -3px rgba(199,91,59,0.46)
+    -moz-box-shadow: 8px 10px 24px -3px rgba(199,91,59,0.46)
+  #G-text
+    padding: 70px 
+    font-family: Knicknack
+    font-size: 4em
+    color: $dark-red
+
+#A
+  display: flex
+  justify-content: center
+  width: 130px
+  height: 230px
+  background: $blue
+  &:hover
+    cursor: pointer 
+    background: $soft-blue
+    transition: 0.25s
+    box-shadow: 8px 10px 24px -3px rgba(73,131,166,0.46)
+    -webkit-box-shadow: 8px 10px 24px -3px rgba(73,131,166,0.46)
+    -moz-box-shadow: 8px 10px 24px -3px rgba(73,131,166,0.46)
+  #A-text
+    padding: 70px
+    font-family: Knicknack
+    font-size: 4em 
+    color: $dark-blue
+#B
+  display: flex
+  justify-content: center
+  width: 130px
+  height: 230px
+  background: $pink
+  &:hover
+    cursor: pointer 
+    background: $soft-pink
+    transition: 0.25s
+    box-shadow: 8px 10px 24px -3px rgba(194,91,127,0.46)
+    -webkit-box-shadow: 8px 10px 24px -3px rgba(194,91,127,0.46)
+    -moz-box-shadow: 8px 10px 24px -3px rgba(194,91,127,0.46)
+  #B-text
+    padding: 70px
+    font-family: Knicknack
+    font-size: 4em 
+    color: $dark-pink
+#C
+  display: flex
+  justify-content: center
+  width: 130px
+  height: 230px
+  background: $orange
+  &:hover
+    cursor: pointer 
+    background: $soft-orange
+    transition: 0.25s
+    box-shadow: 8px 10px 24px -3px rgba(181,160,92,0.46)
+    -webkit-box-shadow: 8px 10px 24px -3px rgba(181,160,92,0.46)
+    -moz-box-shadow: 8px 10px 24px -3px rgba(181,160,92,0.46)
+  #C-text
+    padding: 70px
+    font-family: Knicknack
+    font-size: 4em 
+    color: $dark-orange
+#D
+  display: flex
+  justify-content: center
+  width: 130px
+  height: 230px
+  background: $pistacho
+  &:hover
+    cursor: pointer 
+    background: $soft-pistacho
+    transition: 0.25s
+    box-shadow: 8px 10px 24px -3px rgba(153,164,91,0.46)
+    -webkit-box-shadow: 8px 10px 24px -3px rgba(153,164,91,0.46)
+    -moz-box-shadow: 8px 10px 24px -3px rgba(153,164,91,0.46)
+
+  #D-text
+    padding: 70px
+    font-family: Knicknack
+    font-size: 4em
+    color: $dark-pistacho
+#E
+  display: flex
+  justify-content: center
+  width: 130px
+  height: 230px
+  background: $green
+  &:hover
+    cursor: pointer 
+    background: $soft-green
+    transition: 0.25s
+    box-shadow: 8px 10px 24px -3px rgba(43,130,80,0.46) 
+    -webkit-box-shadow: 8px 10px 24px -3px rgba(43,130,80,0.46)
+    -moz-box-shadow: 8px 10px 24px -3px rgba(43,130,80,0.46)
+  #E-text
+    padding: 70px
+    font-family: Knicknack
+    font-size: 4em 
+    color: $dark-green
+  
+#F
+  display: flex
+  justify-content: center
+  width: 130px
+  height: 230px
+  background: $purple
+  &:hover
+    cursor: pointer 
+    background: $soft-purple
+    transition: 0.25s
+    box-shadow: 8px 10px 24px -3px rgba(140,107,191,0.46)
+    -webkit-box-shadow: 8px 10px 24px -3px rgba(140,107,191,0.46)
+    -moz-box-shadow: 8px 10px 24px -3px rgba(140,107,191,0.46)
+  #F-text
+    padding: 70px
+    font-family: Knicknack
+    font-size: 4em
+    color: $dark-purple
+
+//NOTAS AGUDAS
+    
+#Gb
+  display: flex
+  justify-content: center
+  width: 130px
+  height: 230px
+  background: $soft-red
+  &:hover
+    cursor: pointer 
+    background: $soft2-red
+    transition: 0.25s
+    box-shadow: 8px 10px 24px -3px rgba(199,91,59,0.46)
+    -webkit-box-shadow: 8px 10px 24px -3px rgba(199,91,59,0.46)
+    -moz-box-shadow: 8px 10px 24px -3px rgba(199,91,59,0.46)
+  #Gb-text
+    padding: 70px 
+    font-family: Knicknack
+    font-size: 4em
+    color: $red
+
+#Ab
+  display: flex
+  justify-content: center
+  width: 130px
+  height: 230px
+  background: $soft-blue
+  &:hover
+    cursor: pointer 
+    background: $soft2-blue
+    transition: 0.25s
+    box-shadow: 8px 10px 24px -3px rgba(73,131,166,0.46)
+    -webkit-box-shadow: 8px 10px 24px -3px rgba(73,131,166,0.46)
+    -moz-box-shadow: 8px 10px 24px -3px rgba(73,131,166,0.46)
+  #Ab-text
+    padding: 70px
+    font-family: Knicknack
+    font-size: 4em 
+    color: $blue
+
+#Bb
+  display: flex
+  justify-content: center
+  width: 130px
+  height: 230px
+  background: $soft-pink
+  &:hover
+    cursor: pointer 
+    background: $soft2-pink
+    transition: 0.25s
+    box-shadow: 8px 10px 24px -3px rgba(194,91,127,0.46)
+    -webkit-box-shadow: 8px 10px 24px -3px rgba(194,91,127,0.46)
+    -moz-box-shadow: 8px 10px 24px -3px rgba(194,91,127,0.46)
+  #Bb-text
+    padding: 70px
+    font-family: Knicknack
+    font-size: 4em 
+    color: $pink
+
+#Cb
+  display: flex
+  justify-content: center
+  width: 130px
+  height: 230px
+  background: $soft-orange
+  &:hover
+    cursor: pointer 
+    background: $soft2-orange
+    transition: 0.25s
+    box-shadow:  8px 10px 24px -3px rgba(181,160,92,0.46)
+    -webkit-box-shadow: 8px 10px 24px -3px rgba(181,160,92,0.46)
+    -moz-box-shadow: 8px 10px 24px -3px rgba(181,160,92,0.46)
+  #Cb-text
+    padding: 70px
+    font-family: Knicknack
+    font-size: 4em 
+    color: $orange
+
+
+// Rana y mensajes 
+//Level up
+#ranaverde
+  position: fixed
+  left: 590px
+  top: 100px
+  width: 300px
+  
+#levelUpCaja
+  position: fixed
+  left: 700px
+  top: 30px
+  display: none
+  
+#levelUpImg
+  width: 400px
+#Caja
+  position: fixed
+  left: 800px
+  top: 30px
+  display: none
+ 
+#goodImg
+  width: 400px
+
