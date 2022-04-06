@@ -25,9 +25,10 @@ let level = 1;
 
 
 // Array de prueba de nivel corto
-
-let array1=["C","C","D","C","F","E","C","C","D","C","Gb","F","C","C","Cb","Ab","F","E","D","Cb","Cb","Bb", "Gb","Ab","Gb"];
-let array2=["B","C","D","B","A","B","G","B","B","A","G","B","B","A","B","C","D","B","A","B","G","B","B","A","G","B","B","A","D","D","D","E","A","A","A","A","A","G","G","G","G","G"];
+let array1=["C","C","D","C","F","E"];
+let array2=["C","C","D","C","F","E","C","C","D","C","Gb","F"]; 
+// array2=["C","C","D","C","F","E","C","C","D","C","Gb","F","C","C","Cb","Ab","F","E","D","Cb","Cb","Bb", "Gb","Ab","Gb"];
+//let array2=["B","C","D","B","A","B","G","B","B","A","G","B","B","A","B","C","D","B","A","B","G","B","B","A","G","B","B","A","D","D","D","E","A","A","A","A","A","G","G","G","G","G"];
 
 let levels = [array1, array2];
 let currentArray = levels[level-1];
@@ -35,13 +36,11 @@ let currentArray = levels[level-1];
 loadLevel();
 
 
-
-//1.1.Notas graves
 let notas = document.querySelectorAll(".pianoTecla");
 notas.forEach((tecla)=>{
   
   tecla.addEventListener('click', (e) => {
-    const audio = new Audio(`../assets/Sounds/${tecla.id}.wav`);
+    const audio = new Audio(`./assets/Sounds/${tecla.id}.wav`);
     audio.play();
     
     if(tecla.id == currentArray[contador]){
@@ -55,9 +54,12 @@ notas.forEach((tecla)=>{
   });
 })
 
+//CARGA DE NIVEL 
 function loadLevel(){
+  let caja = document.querySelector(".cancion");
+    caja.innerHTML = "";
   currentArray.forEach(elem => {
-    let caja = document.querySelector(".cancion");
+    
     var newDiv = document.createElement("div");
     newDiv.classList.add("nota");
     caja.appendChild(newDiv);
@@ -107,8 +109,8 @@ function checkEnd(){
     if(contador == currentArray.length){
       level++;
       currentArray = levels[level-1];
-      alert("te has pasado el nivel")
       document.querySelector("#levelUpCaja").style.display= "block";
+      alert('Has pasado de nivel')
       changelevelicon();
       loadLevel();
 
@@ -131,7 +133,7 @@ function showCaja(success){
   
   let mensaje = document.querySelector("#Caja");
   let img = document.querySelector("#goodImg");
-
+  document.querySelector("#levelUpCaja").style.display= "none";
   if(success){
     mensaje.style.display = "block";    
     img.src = "assets/images/good.png";
@@ -142,11 +144,10 @@ function showCaja(success){
 
 }
 
-//Refresh
-const reloadtButton = document.querySelector("#reload");
 // Reload everything:
 function reload() {
     reload = location.reload();
 }
 // Event listeners for reload
+let reloadButton= document.querySelector("#reload");
 reloadButton.addEventListener("click", reload, false);
